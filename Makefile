@@ -11,7 +11,7 @@ DOCS_DIR=$(APP_DIR)/docs
 VENV=python-skeleton-venv
 PROGRAM=run.py
 TOUCH_FILES=requirements docs-requirements
-TEMP_FOLDERS=coverage_html_report $(VENV) $(DOCS_DIR)/build
+TEMP_FOLDERS=coverage_html_report $(VENV) $(DOCS_DIR)/build $(SRC_DIR)/__pycache__
 
 help:
 	@grep -E '^[0-9a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36mmake %-30s\033[0m %s\n", $$1, $$2}'
