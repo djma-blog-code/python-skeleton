@@ -37,11 +37,10 @@ docs-requirements: virtual-env ## Install python dependencies
     )
 	touch $@
 
-html-docs: docs-requirements ## Build html documentation
+html-docs: changelog docs-requirements ## Build html documentation
 	@echo "=========> Building HTML documents"
 	( \
 		source $(VENV)/bin/activate; \
-		gitchangelog -d > app/docs/source/Changelog.rst; \
 		cd $(DOCS_DIR); \
 		make html; \
 	)
@@ -60,6 +59,11 @@ coverage: virtual-env requirements ## generate a coverage report for the unit te
 		source $(VENV)/bin/activate; \
 		PYTHONPATH=$(APP_DIR):$(PYTHONPATH) pytest --cov-report term-missing --cov=src $(TEST_DIR); \
 	)
+
+changelog: docs-requirements ## generate a new changelog
+	gitchangelog -d > app/docs/source/Changelog.rst
+
+minor-revision:
 
 ci: unittest coverage ## unit tests and coverage report in one
 
