@@ -59,14 +59,14 @@ The solution will build and configure its own virtual environment so no preparat
 
 The Makefile is self documenting so just run `make` and it will provide the list of available macros
 
-`make ci`                             unit tests and coverage report in one
-`make clean`                          clean everything up
-`make coverage`                       generate a coverage report for the unit tests
-`make docs-requirements`              Install python dependencies
-`make html-docs`                      Build html documentation
-`make requirements`                   Install python dependencies
-`make unittest`                       run the unit tests for the app
-`make virtual-env`                    Creates a virtual environment for the python dependencies
+- `make ci`                             unit tests and coverage report in one
+- `make clean`                          clean everything up
+- `make coverage`                       generate a coverage report for the unit tests
+- `make docs-requirements`              Install python dependencies
+- `make html-docs`                      Build html documentation
+- `make requirements`                   Install python dependencies
+- `make unittest`                       run the unit tests for the app
+- `make virtual-env`                    Creates a virtual environment for the python dependencies
 
 ## Cleaning up
 
