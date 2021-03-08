@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-(unreleased)
-------------
+1.0.0 (2021-03-08)
+------------------
 
 Features
 ~~~~~~~~
@@ -12,6 +12,8 @@ Features
 
 Documentation
 ~~~~~~~~~~~~~
+- Changelog : Update to include top level changelog. [Mike Arnold]
+
 - Build : Fixed macros for changelog. [Mike Arnold]
 
 

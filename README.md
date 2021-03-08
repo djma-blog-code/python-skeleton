@@ -32,10 +32,11 @@ The solution will build and configure its own virtual environment so no preparat
 ├── config
 │   ├── apache
 │   └── wsgi
-└── ops
-    ├── docker
-    ├── kubernetes
-    └── terraform
+├── ops
+│   ├── docker
+│   ├── kubernetes
+│   └── terraform
+└── scripts
 
 ```
 
@@ -48,6 +49,7 @@ The solution will build and configure its own virtual environment so no preparat
 - `/app/*requirements.txt` Python dependency files for the app, test and documentation
 - `.coveragerc` rules for coverage report for unit tests
 - `Makefile` The brains of the operation, all the automation macros to build, test and deploy the solution.
+- `scripts` Some useful scripts to assist with things
 
 ## Order of Execution
 
@@ -76,4 +78,3 @@ To clean the environment after review `make clean` will remove the all build res
 
 ## TODO
 
-- Add in cleanup of pycache folders
