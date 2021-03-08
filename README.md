@@ -53,12 +53,14 @@ The solution will build and configure its own virtual environment so no preparat
 
 1. `make unittest` - runs the unit test framework
 2. `make coverage` - runs a coverage report for unit testing and outputs to terminal
-3. `make html-docs` - Will produce a set of documentation of the code and the API spec that can be deployed to a support portal during CI/CD
+3. `make changelog` - produces a new changelog file for the documentation
+4. `make html-docs` - Will produce a set of documentation of the code and the API spec that can be deployed to a support portal during CI/CD
 
 ## Makefile Macros
 
 The Makefile is self documenting so just run `make` and it will provide the list of available macros
 
+- `make changelog`                      generate a new changelog
 - `make ci`                             unit tests and coverage report in one
 - `make clean`                          clean everything up
 - `make coverage`                       generate a coverage report for the unit tests

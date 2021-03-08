@@ -62,8 +62,7 @@ coverage: virtual-env requirements ## generate a coverage report for the unit te
 
 changelog: docs-requirements ## generate a new changelog
 	gitchangelog -d > app/docs/source/Changelog.rst
-
-minor-revision:
+	cp app/docs/source/Changelog.rst Changelog.rst 
 
 ci: unittest coverage ## unit tests and coverage report in one
 
