@@ -41,6 +41,7 @@ html-docs: docs-requirements ## Build html documentation
 	@echo "=========> Building HTML documents"
 	( \
 		source $(VENV)/bin/activate; \
+		gitchangelog -d > app/docs/source/Changelog.rst; \
 		cd $(DOCS_DIR); \
 		make html; \
 	)

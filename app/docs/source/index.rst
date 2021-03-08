@@ -8,6 +8,9 @@ Hello World documentation!
    api-specification
    modules
 
+.. include:: Changelog.rst
+
+
 Indices and tables
 ==================
 
