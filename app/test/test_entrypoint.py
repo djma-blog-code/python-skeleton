@@ -1,21 +1,47 @@
 import os
-from src.main import HelloWorld
+from src.main import RetrievePets, AddPet
 import unittest
 import tempfile
 
 
-class HelloWorldTestCase(unittest.TestCase):
+class RetrievePetsTestCase(unittest.TestCase):
     # def setUp(self):
-
-    # self.app = flaskr.app.test_client()
+    # we still have no setup for this test
 
     # def tearDown(self):
+    # So no teardown
 
-    def test1(self):
-        hello_world = HelloWorld()
-        response = hello_world.hello_world()
+    def test_retrieve_pets_valid_available_status(self):
 
-        assert response == "Hello World!"
+        retrieve_pets_object = RetrievePets("available")
+        response = retrieve_pets_object.retrieve_pets()
+
+        assert type(response) is dict, "response was not a dictionary object"
+        assert len(response) > 0, "response was empty"
+
+    def test_retrieve_pets_valid_pending_status(self):
+
+        retrieve_pets_object = RetrievePets("pending")
+        response = retrieve_pets_object.retrieve_pets()
+
+        assert type(response) is dict, "response was not a dictionary object"
+        assert len(response) > 0, "response was empty"
+
+    def test_retrieve_pets_valid_sold_status(self):
+
+        retrieve_pets_object = RetrievePets("sold")
+        response = retrieve_pets_object.retrieve_pets()
+
+        assert type(response) is dict, "response was not a dictionary object"
+        assert len(response) > 0, "response was empty"
+
+    def test_retrieve_pets_invalid_status(self):
+
+        retrieve_pets_object = RetrievePets("invalid status")
+        response = retrieve_pets_object.retrieve_pets()
+
+        assert type(response) is dict, "response was not a dictionary object"
+        assert len(response) == 0, "Response was NOT empty"
 
 
 if __name__ == "__main__":
